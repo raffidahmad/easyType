@@ -18,7 +18,7 @@ const Container = styled.div`
 `
 
 function Header(props) {
-    console.log('header', props.isMobile)
+
     return (
         <Container isMobile={props.isMobile}>
             <img src={logo} alt="logo" />

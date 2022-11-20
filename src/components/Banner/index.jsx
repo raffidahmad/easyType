@@ -20,12 +20,12 @@ const Container = styled.div`
     }
 `
 function Banner(props) {
-    console.log(props.isMobile)
+
     return (
         <Container>
             {!props.isMobile && `Hello friend 👋 ! Sharing is caring.`}
             <b>
-                Tell a friend about this cool website and let’s break the internet  🚀.
+                Tell a friend about this cool website and let’s break the internet  🚀.&nbsp;
                 <span>
                     Copy link
                 </span>
