@@ -2,24 +2,13 @@ import styled from "styled-components";
 import Email from "../Email";
 import Button from "../Button";
 import StyledHeading from "../common/StyledHeading";
+import Text from "../common/StyledText";
 const Container = styled.div`
     display: flex;
     flex-direction: ${props => !props.isMobile ? "column" : "row"};
     justify-content: center;
     align-items: center;
     `
-
-const Text = styled.p`
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 22.08px;
-    text-align: center;
-    color: #2D2D2D;
-    margin-bottom: 20px;
-    span{
-        font-weight: 700;
-    }
-`
 
 function Headline(props) {
     return (
