@@ -1,4 +1,5 @@
 
+import './style.css'
 function FooterItems(props) {
     return (
         <div>
@@ -8,6 +9,7 @@ function FooterItems(props) {
                 {props.content.map((content, index) => (
                     <div className="footer-item-content-item" key={index}>
                         {content}
+
                     </div>
                 ))}
             </div>
