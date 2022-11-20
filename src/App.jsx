@@ -28,12 +28,11 @@ function App() {
       <Header isMobile={isMobile} />
       <Headline isMobile={isMobile}>👋 Welcome to easytype.ai</Headline>
 
-      <StyledHeading>
+      <StyledHeading isMobile={isMobile}>
         EasyType, <br></br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; your co-pilot
       </StyledHeading>
 
       <Phone isMobile={isMobile} />
-
       <Text style={{
         width: isMobile ? "90%" : "30%",
         margin: "auto",
@@ -43,14 +42,14 @@ function App() {
         What if we told you we didn’t write most of this text. EasyType did.
         And this is how it works 👇.
       </Text>
-
       <StyledHeading style={{
         marginTop: "8rem",
         marginBottom: "5rem",
-      }}>
+      }} 
+      isMobile={isMobile}>
         Imagine, write,<br /> & sit back... 🪄
       </StyledHeading>
-
+      
       <Features isMobile={isMobile} />
 
       <StyledHeading style={{
@@ -58,11 +57,12 @@ function App() {
         margin: "auto",
         marginTop: "5rem",
         marginBottom: "5rem",
-      }}>
+      }} 
+      isMobile={isMobile}>
         Classic Essay writing, but <mark>better</mark>
       </StyledHeading>
 
-      <StyledHeading>
+      <StyledHeading isMobile={isMobile}>
         Try free sample
       </StyledHeading>
 
@@ -88,8 +88,8 @@ function App() {
         <Button name="TRY FOR FREE" />
       </div>
 
-      <StyledHeading>
-        Let's Get <h1>#social</h1>
+      <StyledHeading isMobile={isMobile}>
+        Let's Get <b>#social</b>
       </StyledHeading>
       
       <Social isMobile={isMobile} />

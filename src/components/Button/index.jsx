@@ -17,7 +17,7 @@ const StyledButton = styled.button`
 
 function Button(props) {
     return (
-        <StyledButton>
+        <StyledButton style={props.style}>
             {props.name}
         </StyledButton>
     )

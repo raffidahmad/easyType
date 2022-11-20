@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Heading = styled.h1`
-    font-size: 112.18px;
+    font-size: ${props => props.isMobile ? '50px' : '112.18px'};
     font-weight: 700;
-    line-height: 111.56px;
+    line-height: ${props => props.isMobile ? '40px' : '112.18px'};
     text-align: center;
     color: #0C0C0D;
     mark{
@@ -18,7 +18,7 @@ const Heading = styled.h1`
     span{
         color: #0C0C0D;
     }
-    h1{
+    b{
         color:#568AB6;
         font-size:inherit;
         display:inline-block;
@@ -27,7 +27,7 @@ const Heading = styled.h1`
 
 function StyledHeading(props) {
     return (
-        <Heading style={props.style}>
+        <Heading style={props.style} isMobile={props.isMobile}>
             {props.children}
         </Heading>
     )

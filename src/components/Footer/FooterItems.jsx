@@ -1,13 +1,19 @@
-
 import './style.css'
 function FooterItems(props) {
     return (
-        <div>
-
-            <div className="">{props.title}</div>
-            <div className="footer-item-content">
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            gap:'0.5rem',
+        }}>
+            <div style={{fontWeight:'700'}}>{props.title}</div>
+            <div style={{
+            display: "flex",
+            flexDirection: "column",
+            gap:'0.5rem',
+        }}>
                 {props.content.map((content, index) => (
-                    <div className="footer-item-content-item" key={index}>
+                    <div key={index}>
                         {content}
 
                     </div>

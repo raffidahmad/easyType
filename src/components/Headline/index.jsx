@@ -14,12 +14,12 @@ function Headline(props) {
     return (
         <Container>
             <div style={{
-                width: '50%'
+                width: props.isMobile ? '90%' : '50%',
             }}>
                 <Text>
                     👋 Welcome to <span>easytype.ai</span>
                 </Text>
-                <StyledHeading>
+                <StyledHeading isMobile={props.isMobile}>
                     writing essays... made easy with <mark>AI<span>.</span></mark>
                 </StyledHeading>
                 <div style={{
