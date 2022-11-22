@@ -21,7 +21,7 @@ function Headline(props) {
                 <StyledHeading isMobile={props.isMobile}>
                     writing essays... made easy <br></br>with <mark>AI<span>.</span></mark>
                 </StyledHeading>
-               <Form setTrial={props.setTrial}/>
+               <Form setTrial={props.setTrial} isMobile={props.isMobile}/>
                 <Text style={{
                     margin: 'auto',
                     marginTop: '5rem',

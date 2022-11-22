@@ -18,7 +18,7 @@ const StyledHeading2 = styled(Heading)`
         color: #6EAE8D;
         font-size: inherit;
         font-weight: 700;
-        width: 60%;
+        width: ${props => props.isMobile ? '90%': '60%'};
         text-align: center;
         margin-top: 0.6rem;
     }
@@ -35,7 +35,7 @@ function Trial({isMobile}) {
     :  <StyledText> Get your 500 word <span>free essay</span>.</StyledText>
 
     const title =  !submitted ?
-        <StyledHeading2>
+        <StyledHeading2 isMobile={isMobile}>
             <form onSubmit={(event) => handleSubmit(event)}>
                 I need an essay about <input type="text" placeholder="Chiwawas" />.
             </form>
@@ -49,15 +49,17 @@ function Trial({isMobile}) {
             <NavBar />
             {headline}
             <div style={{
-                width:"50%",
-                margin:"auto"
+                width: isMobile ? "90%" : "50%",
+                margin:"auto",
+                padding: "1rem"
             }}>
                 {title}
             </div>
             
             <div style={{
-                width:"40%",
-                margin: submitted ? "" : "auto",
+                 width: isMobile ? "90%" : "40%",
+                marginLeft: submitted ? "" : "auto",
+                marginRight: submitted ? "" : "auto",
                 marginTop: submitted ? "" : "5rem",
                 marginBottom: submitted ? "" :"15rem"
             }}>
@@ -67,7 +69,9 @@ function Trial({isMobile}) {
             }
             </div>
             {
-                submitted && <StyledText>
+                submitted && <StyledText style={{
+                    padding: "1rem",
+                }}>
                     Your friends will want to try it. <span>Share the link</span> an get a 1000 word essay in return.
                 </StyledText>
             }

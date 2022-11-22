@@ -62,7 +62,7 @@ function MainContent({isMobile, setTrial}) {
       On February 1st, we will change the way you’re writing essays.
       Like 22,584 other students, try us now to get a sample of it...you’ll see it’s like magic!
     </Text>
-    <Form setTrial={setTrial}/>
+    <Form setTrial={setTrial} isMobile={isMobile}/>
   </>
   );
 }

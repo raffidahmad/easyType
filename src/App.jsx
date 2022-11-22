@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <Banner isMobile={isMobile} />
-      { trial ? <MainContent isMobile={isMobile} setTrial={()=>handleTrial()}/> : <Trial />}
+      { !trial ? <MainContent isMobile={isMobile} setTrial={()=>handleTrial()}/> : <Trial isMobile={isMobile}/>}
       <StyledHeading isMobile={isMobile} style={{
         marginTop: "13rem",
       }}>

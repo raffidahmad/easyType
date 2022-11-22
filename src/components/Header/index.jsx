@@ -22,7 +22,7 @@ function Header(props) {
             marginBottom: props.isMobile ? "0" : "7rem",
         }}>
             <img src={logo} alt="logo" />
-            <Form setTrial={props.setTrial}/>
+            <Form setTrial={props.setTrial} isMobile={props.isMobile}/>
         </Container>
     )
 }
