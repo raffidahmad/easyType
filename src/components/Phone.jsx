@@ -23,10 +23,9 @@ const Circle = styled.span`
     `;
 
 function Phone(props) {
-    console.log(props.isMobile)
     return (
         <div style={{
-            border: "4px solid black",
+            border: "5px solid black",
             borderRadius: "25px",
             width: props.isMobile ? "80%" : '25%',
             margin: "auto",

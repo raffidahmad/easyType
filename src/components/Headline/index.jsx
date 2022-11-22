@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Email from "../Email";
-import Button from "../Button";
+import Form from "../Form";
 import StyledHeading from "../common/StyledHeading";
 import Text from "../common/StyledText";
 const Container = styled.div`
@@ -20,21 +19,13 @@ function Headline(props) {
                     👋 Welcome to <span>easytype.ai</span>
                 </Text>
                 <StyledHeading isMobile={props.isMobile}>
-                    writing essays... made easy with <mark>AI<span>.</span></mark>
+                    writing essays... made easy <br></br>with <mark>AI<span>.</span></mark>
                 </StyledHeading>
-                <div style={{
-                    display: 'flex',
-                    flexDirection: props.isMobile ? "column" : "row",
-                    gap: '20px',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    marginTop: '50px'
-                }}>
-                    <Email />
-                    <Button name="TRY FOR FREE" />
-                </div>
+               <Form setTrial={props.setTrial}/>
                 <Text style={{
-                    marginTop: '80px'
+                    margin: 'auto',
+                    marginTop: '5rem',
+                    width: props.isMobile ? '90%' : '90%',
                 }}>
                     Easytype makes ✏️  writing easy and instant with AI .
                     Input a question and It’ll instantly generate a whole essay, splitting it into different parts,

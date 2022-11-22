@@ -1,8 +1,6 @@
 import logo from '../../assets/EasyTypeLogo_Green.svg';
 import styled from 'styled-components'
-import Button from '../Button';
-import Email from '../Email';
-
+import Form from '../Form';
 const Container = styled.div`
     display: flex;
     flex-direction: ${props => props.isMobile ? "column" : "row"};
@@ -20,17 +18,11 @@ const Container = styled.div`
 function Header(props) {
 
     return (
-        <Container isMobile={props.isMobile}>
+        <Container isMobile={props.isMobile} style={{
+            marginBottom: props.isMobile ? "0" : "7rem",
+        }}>
             <img src={logo} alt="logo" />
-            <div style={{
-                display: 'flex',
-                flexDirection: props.isMobile ? "column" : "row",
-                gap: '20px',
-                alignItems: 'center',
-            }}>
-                <Email />
-                <Button name="TRY FOR FREE" />
-            </div>
+            <Form setTrial={props.setTrial}/>
         </Container>
     )
 }

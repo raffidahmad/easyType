@@ -22,7 +22,7 @@ const Container = styled.div`
 function Banner(props) {
 
     return (
-        <Container>
+        <Container >
             {!props.isMobile && `Hello friend 👋 ! Sharing is caring.`}
             <b>
                 Tell a friend about this cool website and let’s break the internet  🚀.&nbsp;
