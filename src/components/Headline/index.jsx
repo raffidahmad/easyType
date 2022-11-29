@@ -10,10 +10,8 @@ const Container = styled.div`
     `
 
 const Text2 = styled(Text)`
-    text-align: left;
+    text-align: ${props => props.isMobile ? 'left' : 'center'};
     `
-
-
 function Headline(props) {
     return (
         <Container>
@@ -31,7 +29,7 @@ function Headline(props) {
                 </StyledHeading>
              
                <Form setTrial={props.setTrial} isMobile={props.isMobile}/>
-                <Text2 style={{
+                <Text2 isMobile={props.isMobile} style={{
                     marginLeft: 'auto',
                     marginRight: 'auto',
                     marginTop: '5rem',

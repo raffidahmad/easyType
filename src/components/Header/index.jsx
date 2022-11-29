@@ -22,7 +22,7 @@ function Header(props) {
             marginBottom: props.isMobile ? "5rem" : "7rem",
         }}>
             <img src={logo} alt="logo" style={{
-            marginBottom: props.isMobile ? "5rem" : "7rem"
+            marginBottom: props.isMobile ? "5rem" : ""
                 
             }}/>
             <Form setTrial={props.setTrial} isMobile={props.isMobile}/>
