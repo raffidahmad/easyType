@@ -12,9 +12,12 @@ const Text2 = styled(Text)`
         cursor: pointer;
     };
     `;
+    const Text3 = styled(Text2)`
+    text-align: left;
+    padding: 0 10px;
+    `;
 
 const Circle = styled.span`
-
     background-color: #83BE8F;
     border-radius: 50%;
     display: inline-block;
@@ -26,8 +29,8 @@ function Phone(props) {
     return (
         <div style={{
             border: "5px solid black",
-            borderRadius: "25px",
-            width: props.isMobile ? "80%" : '25%',
+            borderRadius: "35px",
+            width: props.isMobile ? "80%" : '45%',
             margin: "auto",
 
         }}>
@@ -35,9 +38,11 @@ function Phone(props) {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                padding: "10px ",
+                padding: "30px ",
             }}>
-                <div>
+                <div style={{
+                    fontSize:'28px'
+                }}>
                     9:41
                 </div>
                 <div>
@@ -48,28 +53,27 @@ function Phone(props) {
             style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
-                marginBottom: "0px",
-                padding: "10px",
+                marginBottom: "10%",
             }}>
                 <div style={{
                     display: "flex",
                     alignItems: "center",
                     gap: "40px",
-                    marginBottom: "50px",
+                    marginBottom: "15%",
+                    marginLeft: "5%",
                 }}>
-                    <img src={groupIcon} width='30px' />
+                    <img src={groupIcon} width='37px' />
                     <Text style={{
-                        fontSize: "20px",
+                        fontSize: "33px",
                         marginBottom: "0px",
                     }}>
                         Welcome back to <span>easytype!</span>
                     </Text>
                 </div>
 
-                <Text2>
+                <Text3>
                     I need an essay about <mark>hungry dinosours</mark> and <mark>how they got exctinct</mark> with<mark> 500</mark> words.
-                </Text2>
+                </Text3>
                 
             </div>
             <div style={{

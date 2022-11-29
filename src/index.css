@@ -4,5 +4,21 @@
   padding: 0;
   /* font-family: 'Acherus Grotesque', sans-serif; */
   font-family: 'Karla', sans-serif;
-                                                
+
+}
+
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .semiDiv {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainDiv {
+    width: calc(100% - 80px);
+    margin: 0 auto;
+  }
 }

@@ -13,7 +13,6 @@ function Form(props) {
             gap: '20px',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: '60px'
         }}
         onSubmit={(event)=>{handleSubmit(event)}}>
             <Email />

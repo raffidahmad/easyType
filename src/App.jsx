@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Social from "./components/Social";
 import MainContent from "./pages/MainContent";
 import Trial from "./pages/Trial";
+import './index.css'
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
   function handleWindowSizeChange() {
@@ -18,21 +19,25 @@ function App() {
   }, []);
   const isMobile = width <= 786;
   const [trial, setTrial] = useState(false)
-  
+
   function handleTrial() {
     setTrial(true)
   }
   return (
-    <div>
+    <div className="">
       <Banner isMobile={isMobile} />
-      { !trial ? <MainContent isMobile={isMobile} setTrial={()=>handleTrial()}/> : <Trial isMobile={isMobile}/>}
-      <StyledHeading isMobile={isMobile} style={{
-        marginTop: "13rem",
+      <div className="mainDiv" style={{
+        marginTop: isMobile ? '10%' : '',
       }}>
-        Let's Get <b>#social</b>
-      </StyledHeading>
+        {!trial ? <MainContent isMobile={isMobile} setTrial={() => handleTrial()} /> : <Trial isMobile={isMobile} />}
+        <StyledHeading isMobile={isMobile} style={{
+          marginTop: "13rem",
+        }}>
+          Let's Get <b>#social</b>
+        </StyledHeading>
 
-      <Social isMobile={isMobile} />
+        <Social isMobile={isMobile} />
+      </div>
       <Footer isMobile={isMobile} />
     </div>
   )

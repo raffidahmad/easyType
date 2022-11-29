@@ -8,20 +8,23 @@ const Container = styled.div`
     font-weight: 400;
     justify-content: space-between;
     align-items: center;
-    margin: 3% 20%;
+    margin-top: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
     img {
         width: ${props => props.isMobile ? "50%" : "auto"};
-        margin-bottom: ${props => props.isMobile ? "20px" : "0"};
     }
 `
 
 function Header(props) {
-
     return (
         <Container isMobile={props.isMobile} style={{
-            marginBottom: props.isMobile ? "0" : "7rem",
+            marginBottom: props.isMobile ? "5rem" : "7rem",
         }}>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" style={{
+            marginBottom: props.isMobile ? "5rem" : "7rem"
+                
+            }}/>
             <Form setTrial={props.setTrial} isMobile={props.isMobile}/>
         </Container>
     )

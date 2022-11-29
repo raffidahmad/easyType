@@ -9,29 +9,40 @@ const Container = styled.div`
     align-items: center;
     `
 
+const Text2 = styled(Text)`
+    text-align: left;
+    `
+
+
 function Headline(props) {
     return (
         <Container>
             <div style={{
-                width: props.isMobile ? '90%' : '50%',
+                width: props.isMobile ? '100%' : '70%',
             }}>
                 <Text>
                     👋 Welcome to <span>easytype.ai</span>
                 </Text>
-                <StyledHeading isMobile={props.isMobile}>
-                    writing essays... made easy <br></br>with <mark>AI<span>.</span></mark>
+                <StyledHeading isMobile={props.isMobile} style={{
+                    marginBottom:props.isMobile ? '30%' : '4%',
+                    marginTop: props.isMobile ? '20%' : ''
+                    }}>
+                    writing essays...<br></br> made easy<br></br> with <mark>AI<span>.</span></mark>
                 </StyledHeading>
+             
                <Form setTrial={props.setTrial} isMobile={props.isMobile}/>
-                <Text style={{
-                    margin: 'auto',
+                <Text2 style={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
                     marginTop: '5rem',
-                    width: props.isMobile ? '90%' : '90%',
+                    marginBottom: '5rem',
+                    width: props.isMobile ? '100%' : '90%',
                 }}>
                     Easytype makes ✏️  writing easy and instant with AI .
-                    Input a question and It’ll instantly generate a whole essay, splitting it into different parts,
-                    and even helping you with all the references 😉.  Imagine, all those hours at the library...gone...in an instant!
-                    No more procrastinating, no more endless research. Your imagination unleshead 🚀.
-                </Text>
+                    Input a question and It’ll instantly<br></br> generate a whole essay, splitting it into different parts,
+                    and even helping you with all<br></br>  the references 😉. Imagine, allthose hours at the library...gone...in an instant!
+                    No more<br></br>  procrastinating, no more endless research. Your imagination unleshead 🚀.
+                </Text2>
             </div>
         </Container>
     )

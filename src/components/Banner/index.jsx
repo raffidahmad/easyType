@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     background-color: #6EAE8D;
+    height: 46px;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 0.5rem;
     color: #fff;
@@ -22,10 +24,10 @@ const Container = styled.div`
 function Banner(props) {
 
     return (
-        <Container >
-            {!props.isMobile && `Hello friend 👋 ! Sharing is caring.`}
+        <Container>
+            {!props.isMobile && `Hello friend 👋 ! Sharing is caring. Tell a friend about this cool website and let’s break the internet`}
             <b>
-                Tell a friend about this cool website and let’s break the internet  🚀.&nbsp;
+                  🚀.&nbsp;
                 <span>
                     Copy link
                 </span>
